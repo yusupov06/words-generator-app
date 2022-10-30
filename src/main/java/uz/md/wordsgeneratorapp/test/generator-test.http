@@ -1,0 +1,17 @@
+
+###
+POST http://localhost:8080/api/generator/generate/word
+Content-Type: application/json
+
+{
+"minLength": 2,
+"maxLength": 5,
+"possibleChars":"abc",
+"count": 500
+}
+
+###
+GET http://localhost:8080/api/generator/job/1
+
+###
+GET http://localhost:8080/api/generator/job/stat/running

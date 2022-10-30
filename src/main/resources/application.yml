@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 10m
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/generator_db
+    username: username
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
