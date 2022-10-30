@@ -31,7 +31,6 @@ public class WordGeneratorServiceImpl implements WordGeneratorService {
 
     private final FileService fileService;
     private final JobService jobService;
-    private final JobRepository jobRepository;
 
     @Override
     public ApiResult<?> generate(WordGenerateDTO wordGenerateDTO) {
@@ -76,7 +75,7 @@ public class WordGeneratorServiceImpl implements WordGeneratorService {
         int possibleCounts = evaluatePossibleCounts(minLength, maxLength, chars.length);
         System.out.println("possibleCounts = " + possibleCounts);
         if (possibleCounts < wordGenerateDTO.getCount()) {
-            errors.add(" count may be more than possible counts");
+            errors.add(" count can not be more than :possible counts".replace(":possible", String.valueOf(possibleCounts)));
         }
 
         return errors;
