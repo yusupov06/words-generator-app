@@ -21,6 +21,7 @@ public class JobServiceImpl implements JobService {
 
     private final JobRepository jobRepository;
 
+
     @Override
     public Job add(WordGenerateDTO wordGenerateDTO) {
 
